@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "auto-launch": "^5.0.1",
+    "bootstrap": "^3.3.7",
+    "electron": "^1.7.6",
+    "gitignore": "^0.6.0",
+    "howler": "^2.0.4",
+    "jquery": "^3.2.1"
+  },
+  "name": "musicPlayer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  }
+}

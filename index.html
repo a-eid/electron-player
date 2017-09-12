@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Demo Application Showcase</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- title -->
+    <div class="row">
+      <div class="col-xs-12">
+        <h2> Demo Application Showcase </h2>
+      </div>
+
+    <!--  where the player is  -->
+      <div class="row">
+        <div class="col-xs-12 playhere">
+        </div>
+      </div>
+
+      <div class="row">
+
+      <!-- music files   -->
+        <div class="col-xs-6 ">
+          <form action="POST" enctype="multipart/form-data" class="music">
+
+            <label for="file-music" class="btn btn-default btn-file">
+              Select Music files <input id="file-music" type="file" style="display: none" multiple accept=".mp3"/>
+            </label>
+            <input type="submit" class="btn btn-default submit">
+
+          </form>
+        </div>
+      <!-- other audio  -->
+        <div class="col-xs-6 ">
+          <form action="POST" enctype="multipart/form-data" class="voice" >
+
+            <label for="file-voice" class="btn btn-default btn-file">
+              Select other audio files <input id="file-voice" type=file style="display: none" multiple accept=".mp3"/>
+            </label>
+            <input type="submit" class="btn btn-default">
+
+          </form>
+        </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    window.jQuery =  window.$  = require("./node_modules/jquery/dist/jquery.min.js")
+  </script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script> require("./renderer.js") </script>
+</body>
+
+</html>
