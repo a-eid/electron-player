@@ -17,41 +17,75 @@
       <div class="col-xs-12">
         <h2> Demo Application Showcase </h2>
       </div>
-
-    <!--  where the player is  -->
-      <div class="row">
-        <div class="col-xs-12 playhere">
-        </div>
-      </div>
-
-      <div class="row">
-
-      <!-- music files   -->
-        <div class="col-xs-6 ">
-          <form action="POST" enctype="multipart/form-data" class="music">
-
-            <label for="file-music" class="btn btn-default btn-file">
-              Select Music files <input id="file-music" type="file" style="display: none" multiple accept=".mp3"/>
-            </label>
-            <input type="submit" class="btn btn-default submit">
-
-          </form>
-        </div>
-      <!-- other audio  -->
-        <div class="col-xs-6 ">
-          <form action="POST" enctype="multipart/form-data" class="voice" >
-
-            <label for="file-voice" class="btn btn-default btn-file">
-              Select other audio files <input id="file-voice" type=file style="display: none" multiple accept=".mp3"/>
-            </label>
-            <input type="submit" class="btn btn-default">
-
-          </form>
-        </div>
-
     </div>
 
-  </div>
+    <!--  where the player is  -->
+
+      <div class="row">
+        <!-- music files   -->
+        <div class="col-xs-6 ">
+
+          <div class="container">
+            <form action="POST" enctype="multipart/form-data" class="music">
+
+            <div class="row">
+                <audio controls disabled src="" class="musicaudio">
+                </audio>
+            </div>
+
+              <div class="row">
+                <label for="file-music" class="btn btn-default btn-file">
+                  Select Music files <input id="file-music" type="file" style="display: none" multiple accept=".mp3"/>
+                </label>
+              </div>
+
+              <div class="row">
+                <label data-on="ON" data-off="OFF" class="toggleSwitch">  
+                  <span>Loop</span>
+                  <input type="checkbox" checked="checked"/>
+                  <span class="knob"></span>
+                </label>
+              </div> 
+
+              <div class="row">
+                <input type="submit" class="btn btn-default submit">
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <!-- other audio  -->
+        <div class="col-xs-6 ">
+          <div class="container">
+            <form action="POST" enctype="multipart/form-data" class="voice" >
+
+              <div class="row">
+                  <audio controls disabled src="" class="voiceover">
+                  </audio>
+              </div>
+
+              <div class="row">
+                <label for="file-voice" class="btn btn-default btn-file">
+                  Select other audio files <input id="file-voice" type=file style="display: none" accept=".mp3"/>
+                </label>
+              </div>
+
+              <div class="row">
+                play every (seconds) <input type="text" class="play-every">
+              </div>
+              
+              <div class="row"> 
+                <input type="submit"  class="btn btn-default" 
+                  value="sechedule Voice" >
+                <!-- <button class="btn btn-danger stop-button" >stop voice</button> -->
+              </div>
+
+            </form>
+          </div>
+        </div>
+    </div>
+
 
   <script>
     window.jQuery =  window.$  = require("./node_modules/jquery/dist/jquery.min.js")

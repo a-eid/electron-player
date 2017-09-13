@@ -3,9 +3,13 @@
     "auto-launch": "^5.0.1",
     "bootstrap": "^3.3.7",
     "electron": "^1.7.6",
+    "electron-packager": "^9.0.1",
     "gitignore": "^0.6.0",
     "howler": "^2.0.4",
     "jquery": "^3.2.1"
+  },
+  "scripts": {
+    "build:win32": "electron-packager . --version 0.1 overlaysound --platform=win32 ../build overwrite"
   },
   "name": "musicPlayer",
   "version": "1.0.0",

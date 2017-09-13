@@ -9,6 +9,7 @@ app.on("ready" , () => {
   win = new BrowserWindow({
     width: 800 , 
     height: 600 , 
+    show: false 
   })
 
   win.loadURL(url.format({
@@ -17,7 +18,12 @@ app.on("ready" , () => {
     slashes: true 
   }))
 
+  win.on("ready-to-show" , () => {
+    win.show() 
+  })
+
   win.on("closed" , () => win = null )
+
 })
 
 app.on("window-all-closed" , () => {
