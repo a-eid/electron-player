@@ -8,14 +8,12 @@
     "howler": "^2.0.4",
     "jquery": "^3.2.1"
   },
-  "scripts": {
-    "build:win32": "electron-packager . --version 0.1 overlaysound --platform=win32 ../build overwrite"
-  },
   "name": "musicPlayer",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . --version 0.1 overlaysound --platform=win32 ../build overwrite"
   }
 }
