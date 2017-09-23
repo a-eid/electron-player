@@ -14,7 +14,7 @@ app.on("ready" , () => {
     // transparent: true,
     resizable: false
   })
-  browserWindow.setMenu(null);
+  win.setMenu(null);
 
   win.webContents.on("devtools-opened", () => {
     win.webContents.closeDevTools();
