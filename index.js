@@ -6,7 +6,6 @@ const url = require("url")
 let win
 
 app.on("ready" , () => {
-  browserWindow.setMenu(null);
   win = new BrowserWindow({
     width: 500 ,
     height: 600 ,
@@ -15,6 +14,7 @@ app.on("ready" , () => {
     // transparent: true,
     resizable: false
   })
+  browserWindow.setMenu(null);
 
   win.webContents.on("devtools-opened", () => {
     win.webContents.closeDevTools();
