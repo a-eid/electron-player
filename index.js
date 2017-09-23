@@ -6,6 +6,7 @@ const url = require("url")
 let win
 
 app.on("ready" , () => {
+  browserWindow.setMenu(null);
   win = new BrowserWindow({
     width: 500 ,
     height: 600 ,
