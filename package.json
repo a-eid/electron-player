@@ -14,6 +14,6 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . --version 0.1 overlaysound --platform=win32 ../build overwrite"
+    "build": "electron-packager . overlaysound --platform=win32 ./build overwrite"
   }
 }
